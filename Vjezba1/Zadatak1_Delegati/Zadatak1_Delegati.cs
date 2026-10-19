@@ -28,12 +28,12 @@ static class Zadatak1_Delegati
         Console.WriteLine($"Podijeli(100) = {racun(100)}");
 
         //pozivanje 2 metode
-        Calc oboje = oduzmi;
+        Calc oboje = Oduzmi;
         oboje += Pomnozi;
 
         Console.WriteLine($"Oboje(100) = {oboje(100)}");
 
         //br metoda u listi 
-        Console.Writeline($"Broj metoda u listi = {oboje.GetInvocationList().Length}");
+        Console.WriteLine($"Broj metoda u listi = {oboje.GetInvocationList().Length}");
     }
 }
