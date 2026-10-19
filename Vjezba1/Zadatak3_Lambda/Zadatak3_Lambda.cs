@@ -25,7 +25,19 @@ static class Zadatak3_Lambda
         int faktor = 3;
         Calc3 puta = x => x * faktor;
         Console.WriteLine($"puta(5), faktor = 3: {puta(5)}");
+
         faktor = 10;
         Console.WriteLine($"puta(5), faktor = 10: {puta(5)}");   // zašto je rezultat drukčiji?
+
+        //Lambda za apsol vrijednost bez Math.Abs
+        Calc3 abs = x => x < 0 ? -x : x;
+        Console.WriteLine($"abs(-8) = {abs(-8)}");
+
+        //Lambda bez parametara koja ispisuje trenutno vrijeme
+        Action ispisiVrijeme = () =>
+        {
+            Console.WriteLine($"Trenutno vrijeme: {DateTime.Now}");
+        };
+        ispisiVrijeme();
     }
 }
