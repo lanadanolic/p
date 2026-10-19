@@ -14,6 +14,8 @@ static class Zadatak1_Delegati
     static int Oduzmi(int x) => x - n;
     static int Pomnozi(int x) => x * n;
 
+    static int Podijeli(int x) => x / n;
+
     public static void Pokreni()
     {
         Calc racun = Oduzmi;
@@ -21,5 +23,17 @@ static class Zadatak1_Delegati
 
         racun = Pomnozi;
         Console.WriteLine($"Pomnozi(100) = {racun(100)}");
+
+        racun = Podijeli;
+        Console.WriteLine($"Podijeli(100) = {racun(100)}");
+
+        //pozivanje 2 metode
+        Calc oboje = oduzmi;
+        oboje += Pomnozi;
+
+        Console.WriteLine($"Oboje(100) = {oboje(100)}");
+
+        //br metoda u listi 
+        Console.Writeline($"Broj metoda u listi = {oboje.GetInvocationList().Length}");
     }
 }
