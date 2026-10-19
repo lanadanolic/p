@@ -11,12 +11,16 @@ static class Zadatak2_UniverzalnaFunkcija
     static bool JeParan(int x) => x % 2 == 0;
     static bool JeVeciOdDeset(int x) => x > 10;
 
-    static void Ispisi(int[] niz, Uvjet uvjet)
+    static bool JeDjeljivSaTri(int x) => x % 3 == 0;
+    static int Ispisi(int[] niz, Uvjet uvjet)
     {
+        int brojac = 0;
+
         foreach (int x in niz)
             if (uvjet(x))
                 Console.Write(x + " ");
         Console.WriteLine();
+        return brojac; 
     }
 
     public static void Pokreni()
@@ -28,5 +32,10 @@ static class Zadatak2_UniverzalnaFunkcija
 
         Console.Write("Veći od 10: ");
         Ispisi(niz, JeVeciOdDeset);
+
+        Console.Write("Djeljiv sa 3:");
+        Ispisi(niz, JeDjeljivSaTri);
+
+        Console.WriteLine("Ispisano elemenata: {brojElemenata}");
     }
 }
