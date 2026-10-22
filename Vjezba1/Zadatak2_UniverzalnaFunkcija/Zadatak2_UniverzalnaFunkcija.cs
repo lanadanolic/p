@@ -16,10 +16,12 @@ static class Zadatak2_UniverzalnaFunkcija
     {
         int brojac = 0;
 
-        foreach (int x in niz)
-            if (uvjet(x))
+        foreach (int x in niz){
+            if (uvjet(x)){
                 Console.Write(x + " ");
-        Console.WriteLine();
+                brojac+=1;
+                }}
+        Console.WriteLine(brojac);
         return brojac; 
     }
 
@@ -36,6 +38,7 @@ static class Zadatak2_UniverzalnaFunkcija
         Console.Write("Djeljiv sa 3:");
         Ispisi(niz, JeDjeljivSaTri);
 
-        Console.WriteLine("Ispisano elemenata: {brojElemenata}");
+
+        
     }
 }
